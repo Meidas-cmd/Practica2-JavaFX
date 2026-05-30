@@ -1,4 +1,4 @@
-module org.example.practica2javafx {
+module org.example.demo {
     requires javafx.controls;
     requires javafx.fxml;
     requires javafx.web;
@@ -10,7 +10,8 @@ module org.example.practica2javafx {
     requires org.kordamp.bootstrapfx.core;
     requires eu.hansolo.tilesfx;
     requires com.almasb.fxgl.all;
+    requires java.sql;
 
-    opens org.example.practica2javafx to javafx.fxml;
-    exports org.example.practica2javafx;
+    opens org.example.demo to javafx.fxml;
+    exports org.example.demo;
 }

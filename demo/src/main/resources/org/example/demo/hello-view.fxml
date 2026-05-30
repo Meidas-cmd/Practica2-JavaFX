@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox fx:id="boxId" alignment="CENTER" prefHeight="641.0" prefWidth="867.0" spacing="20.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.demo.HelloController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+   <TableView fx:id="estudiantesTableView" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="753.0" prefWidth="827.0">
+     <columns>
+       <TableColumn fx:id="niaTableColumn" prefWidth="173.0" text="NIA" />
+       <TableColumn fx:id="nombreTableColumn" prefWidth="169.0" text="Nombre" />
+         <TableColumn fx:id="fechaNacimientoTableColumn" maxWidth="1.7976931348623157E308" prefWidth="320.0" text="Fecha nacimiento" />
+     </columns>
+      <columnResizePolicy>
+         <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+      </columnResizePolicy>
+   </TableView>
+
+    <Label fx:id="welcomeText" />
+   <HBox alignment="TOP_CENTER" prefHeight="100.0" prefWidth="200.0">
+      <children>
+          <Button onAction="#editarButton" text="Editar" />
+         <Button onAction="#borrarButton" text="Eliminar" />
+      </children>
+   </HBox>
+   <Label fx:id="mensajeLabel" text="   " />
+   <TextField fx:id="niaTextField" promptText="Introduce un NIA..." />
+   <TextField fx:id="nameTextField" promptText="Introduce un nombre..." />
+   <DatePicker fx:id="fechaPicker" promptText="Fecha de nacimiento..." />
+   <HBox alignment="TOP_CENTER" prefHeight="100.0" prefWidth="200.0">
+      <children>
+         <Button fx:id="insertarButtonId" mnemonicParsing="false" onAction="#insertarButton" text="Insertar" />
+         <Button fx:id="guardarButtonId" disable="true" mnemonicParsing="false" onAction="#guardarButton" text="Guardar" />
+      </children>
+   </HBox>
+</VBox>
